@@ -17,7 +17,7 @@ body {
 }
 #header {
 	z-align: 2;
-  background: url("images/head.jpg");
+  background: url("/images/head.jpg");
   width: 799px;
   height: 139px;
   font-family: Verdana;
@@ -41,7 +41,7 @@ body {
 }
 #leftcol {
   background-repeat: no-repeat;
-  background: url("images/leftcol.jpg");
+  background: url("/images/leftcol.jpg");
   float: left;
   width: 154px;
 }
@@ -49,7 +49,7 @@ body {
   float: left;
   margin-left: 0px;
   padding-left: 120px;
-  background: url("images/leftcol.jpg");
+  background: url("/images/leftcol.jpg");
   background-repeat: no-repeat;
   margin-top: 0px;
   font-family: Verdana;
