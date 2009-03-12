@@ -1,30 +1,18 @@
 <h1>Listing sponsors</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Url</th>
-    <th>Img small</th>
-    <th>Img full</th>
-    <th>Alttext</th>
-  </tr>
-
 <% for sponsor in @sponsors %>
-  <tr>
-    <td><%=h sponsor.name %></td>
-    <td><%=h sponsor.description %></td>
-    <td><%=h sponsor.url %></td>
-    <td><%=h sponsor.img_small %></td>
-    <td><%=h sponsor.img_full %></td>
-    <td><%=h sponsor.alttext %></td>
-    <td><%= link_to 'Show', sponsor %></td>
-    <td><%= link_to 'Edit', edit_sponsor_path(sponsor) %></td>
-    <td><%= link_to 'Destroy', sponsor, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<p>
+	<%= link_to sponsor.name, sponsor.url %> <br />
+	<%= image_tag(sponsor.img_full, :alt => sponsor.alttext) %>
+</p>
+
+<p>
+	<!-- Admin options -->
+	(<%= link_to 'Edit', edit_sponsor_path(sponsor) %> |
+	<%= link_to 'Destroy', sponsor, :confirm => 'Are you sure?', :method => :delete %>)
+</p>
+
 <% end %>
-</table>
 
 <br />
-
-<%= link_to 'New sponsor', new_sponsor_path %>
+<%= link_to 'Add a new sponsor', new_sponsor_path %>
