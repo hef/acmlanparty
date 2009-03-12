@@ -1,6 +1,5 @@
 class SponsorsController < ApplicationController
-  # GET /sponsors
-  # GET /sponsors.xml
+  # Display a list of the sponsors for this lan party event
   def index
     @sponsors = Sponsor.find(:all)
 
@@ -10,19 +9,16 @@ class SponsorsController < ApplicationController
     end
   end
 
-  # GET /sponsors/1
-  # GET /sponsors/1.xml
+  # Redirect the viewer to the sponsor's homepage. We can modify
+  # this method to record the number of times people actually clink
+  # on the sponsors link
   def show
     @sponsor = Sponsor.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @sponsor }
-    end
+	redirect_to @sponsor.url
   end
 
-  # GET /sponsors/new
-  # GET /sponsors/new.xml
+  # Create a new sponsor and display a form to set its properties
   def new
     @sponsor = Sponsor.new
 
