@@ -1,0 +1,18 @@
+<h1>Listing sponsors</h1>
+
+<% for sponsor in @sponsors %>
+<p>
+	<%= link_to sponsor.name, sponsor_path( sponsor ) %> <br />
+	<%= image_tag(sponsor.img_full, :alt => sponsor.alttext) %>
+</p>
+
+<p>
+	<!-- Admin options -->
+	(<%= link_to 'Edit', edit_sponsor_path(sponsor) %> |
+	<%= link_to 'Destroy', sponsor, :confirm => 'Are you sure?', :method => :delete %>)
+</p>
+
+<% end %>
+
+<br />
+<%= link_to 'Add a new sponsor', new_sponsor_path %>
