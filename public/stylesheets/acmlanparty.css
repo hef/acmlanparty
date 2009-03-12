@@ -1,11 +1,10 @@
 body {
 	margin-top: 0px;
   padding: 0px;
-  color: white;
+  color: black;
   background: #191919;
   border-left: #FFFFFF;
   text-align: center;
-  font-size: 10pt;
 }
 #main {
 	border-left: 1px solid #FFF;

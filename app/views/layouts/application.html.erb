@@ -13,8 +13,8 @@
 <div id="main">
   <div id="header"></div>
   <div id="content">
-     <div align="right" id="navigation">
-       <ul>
+    <div align="right" id="navigation">
+      <ul>
         <LI><A HREF='/'>Home</A></LI>
         <LI><A HREF='/events.php'>Events</A></LI>
         <LI><A HREF='/register.php'>Register</A></LI>
@@ -24,13 +24,16 @@
         <LI><A HREF='/faq.php'>FAQ</A></LI>
         <LI><A HREF='/forums.php'>Forums</A></LI>
         <LI><A HREF='/pictures.php'>Pictures</A></LI>
-       </ul>
-     </div>
+      </ul>
+    </div>
   </div>
-</div>
-<p style="color: green"><%= flash[:notice] %></p>
-<div id="inthecontent">
-<%= yield  %>
+  <HR>
+  <div id="inthecontent">
+    <p style="color: green"><%= flash[:notice] %></p>
+    <%= yield  %>
+  </div>
+  <div id="footer"> Copyright (c) 2007-2008 - <A HREF="http://acm.cs.uic.edu/">ACM of UIC</A></div>
+  </div>
 </div>
 
 </body>
