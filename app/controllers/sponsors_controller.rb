@@ -41,7 +41,7 @@ class SponsorsController < ApplicationController
     respond_to do |format|
       if @sponsor.save
         flash[:notice] = 'Sponsor was successfully created.'
-        format.html { redirect_to(@sponsor) }
+        format.html { redirect_to :action => :index }
         format.xml  { render :xml => @sponsor, :status => :created, :location => @sponsor }
       else
         format.html { render :action => "new" }
@@ -58,7 +58,7 @@ class SponsorsController < ApplicationController
     respond_to do |format|
       if @sponsor.update_attributes(params[:sponsor])
         flash[:notice] = 'Sponsor was successfully updated.'
-        format.html { redirect_to(@sponsor) }
+        format.html { redirect_to :action => :index }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
