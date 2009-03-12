@@ -2,6 +2,7 @@ class CreateSponsors < ActiveRecord::Migration
   def self.up
 	create_table "sponsors", :force => true do |t|
 		t.column :name,				:string
+		t.column :description,		:string
 		t.column :url,				:string
 		t.column :img_small,		:string
 		t.column :img_full,			:string

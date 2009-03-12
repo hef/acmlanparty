@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(:version => 20090312024004) do
     t.datetime "updated_at"
   end
 
+  create_table "sponsors", :force => true do |t|
+    t.string "name"
+    t.string "description"
+    t.string "url"
+    t.string "img_small"
+    t.string "img_full"
+    t.string "alttext"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 40
     t.string   "name",                      :limit => 100, :default => ""
