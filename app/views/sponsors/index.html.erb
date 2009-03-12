@@ -4,6 +4,9 @@
 <p>
 	<%= link_to sponsor.name, sponsor_path( sponsor ) %> <br />
 	<%= image_tag(sponsor.img_full, :alt => sponsor.alttext) %>
+
+	<br clear="all" />
+	<%= sponsor.description %>
 </p>
 
 <p>
