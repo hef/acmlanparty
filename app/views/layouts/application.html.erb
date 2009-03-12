@@ -10,9 +10,28 @@
 </head>
 <body>
 
+<div id="main">
+  <div id="header"></div>
+  <div id="content">
+     <div align="right" id="navigation">
+       <ul>
+        <LI><A HREF='/'>Home</A></LI>
+        <LI><A HREF='/events.php'>Events</A></LI>
+        <LI><A HREF='/register.php'>Register</A></LI>
+        <LI><A HREF='/attendees.php'>Attendees</A></LI>
+        <LI><A HREF='/directions.php'>Directions</A></LI>
+        <LI><A HREF='/sponsors.php'>Sponsors</A></LI>
+        <LI><A HREF='/faq.php'>FAQ</A></LI>
+        <LI><A HREF='/forums.php'>Forums</A></LI>
+        <LI><A HREF='/pictures.php'>Pictures</A></LI>
+       </ul>
+     </div>
+  </div>
+</div>
 <p style="color: green"><%= flash[:notice] %></p>
-
+<div id="inthecontent">
 <%= yield  %>
+</div>
 
 </body>
 </html>
