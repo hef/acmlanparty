@@ -21,23 +21,23 @@ class GamesControllerTest < ActionController::TestCase
   end
 
   test "should show game" do
-    get :show, :id => games(:one).id
+    get :show, :id => games(:tf2).id
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => games(:one).id
+    get :edit, :id => games(:tf2).id
     assert_response :success
   end
 
   test "should update game" do
-    put :update, :id => games(:one).id, :game => { }
+    put :update, :id => games(:tf2).id, :game => { }
     assert_redirected_to game_path(assigns(:game))
   end
 
   test "should destroy game" do
     assert_difference('Game.count', -1) do
-      delete :destroy, :id => games(:one).id
+      delete :destroy, :id => games(:tf2).id
     end
 
     assert_redirected_to games_path
