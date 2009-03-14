@@ -21,23 +21,23 @@ class InstancesControllerTest < ActionController::TestCase
   end
 
   test "should show instance" do
-    get :show, :id => instances(:one).id
+    get :show, :id => instances(:marchlanparty).id
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => instances(:one).id
+    get :edit, :id => instances(:marchlanparty).id
     assert_response :success
   end
 
   test "should update instance" do
-    put :update, :id => instances(:one).id, :instance => { }
+    put :update, :id => instances(:marchlanparty).id, :instance => { }
     assert_redirected_to instance_path(assigns(:instance))
   end
 
   test "should destroy instance" do
     assert_difference('Instance.count', -1) do
-      delete :destroy, :id => instances(:one).id
+      delete :destroy, :id => instances(:marchlanparty).id
     end
 
     assert_redirected_to instances_path
