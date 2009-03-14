@@ -17,12 +17,14 @@ class SponsorsControllerTest < ActionController::TestCase
       post :create, :sponsor => { }
     end
 
-    assert_redirected_to sponsor_path(assigns(:sponsor))
+#   assert_redirected_to sponsor_path(assigns(:sponsor))
+	assert_redirected_to( :action => :index )
   end
 
   test "should show sponsor" do
     get :show, :id => sponsors(:one).id
-    assert_response :success
+#   assert_response :success
+	assert_redirected_to( sponsors(:one).url )
   end
 
   test "should get edit" do
@@ -32,7 +34,8 @@ class SponsorsControllerTest < ActionController::TestCase
 
   test "should update sponsor" do
     put :update, :id => sponsors(:one).id, :sponsor => { }
-    assert_redirected_to sponsor_path(assigns(:sponsor))
+#   assert_redirected_to sponsor_path(assigns(:sponsor))
+	assert_redirected_to( :action => :index )
   end
 
   test "should destroy sponsor" do
