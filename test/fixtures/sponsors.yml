@@ -1,12 +1,12 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  description: MyString
-  url: MyString
-  img_small: MyString
-  img_full: MyString
-  alttext: MyString
+google:
+  name: google
+  description: Search it dude
+  url: "http://google.com"
+  img_small: "http://www.google.com/intl/en_ALL/images/logo.gif"
+  img_full: "http://www.google.com/intl/en_ALL/images/logo.gif"
+  alttext: Google Search Engine
 
 two:
   name: MyString

@@ -1,7 +1,19 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
+tf2:
+  name: "Team Fortress 2"
 
-two:
-  name: MyString
+l4d:
+  name: "Left 4 dead"
+
+css:
+  name: "Counter Strike: Source"
+
+starcraft:
+ name: "Starcraft BroodWar"
+
+tmn:
+  name: "Track Mania Nations"
+
+cod4:
+  name: "Call of duty 4"
