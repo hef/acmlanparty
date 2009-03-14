@@ -62,6 +62,16 @@ class UsersController < ApplicationController
     @user.destroy
     redirect_to users_path
   end
+
+  def index
+    @users = User.find(:all)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      #TODO remove or clean the output, it leaves the salted password exposed
+      format.xml { render :xml => @users }
+    end
+  end
   
   # There's no page here to update or destroy a user.  If you add those, be
   # smart -- make sure you check that the visitor is authorized to do so, that they
