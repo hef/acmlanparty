@@ -1,14 +1,16 @@
-<h1>Listing Attendees</h1>
+<h1>Attendees for next LAN event</h1>
 
 <table>
   <tr>
-    <th>Attendees</th>
+    <th>Signed Up</th>
+    <th>handle</th>
+    <th>group</th>
   </tr>
 
 <% for user in @users %>
   <tr>
+    <td><%=h user.created_at.strftime("%Y/%m/%d") %></td>
     <td><%=h user.login %></td>
-    <td><%=h user.name %></td>
     <td><%=h user.state %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
