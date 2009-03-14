@@ -1,0 +1,28 @@
+<h1>Listing instances</h1>
+
+<table>
+  <tr>
+    <th>Start</th>
+    <th>End</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Location</th>
+  </tr>
+
+<% for instance in @instances %>
+  <tr>
+    <td><%=h instance.start %></td>
+    <td><%=h instance.end %></td>
+    <td><%=h instance.title %></td>
+    <td><%=h instance.description %></td>
+    <td><%=h instance.location %></td>
+    <td><%= link_to 'Show', instance %></td>
+    <td><%= link_to 'Edit', edit_instance_path(instance) %></td>
+    <td><%= link_to 'Destroy', instance, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New instance', new_instance_path %>
