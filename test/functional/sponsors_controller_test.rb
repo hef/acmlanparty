@@ -21,7 +21,7 @@ class SponsorsControllerTest < ActionController::TestCase
 	assert_redirected_to( :action => :index )
   end
 
-  test "should show sponsor" do
+  test "should show the website of the sponsor" do
     get :show, :id => sponsors(:one).id
 #   assert_response :success
 	assert_redirected_to( sponsors(:one).url )
@@ -32,7 +32,7 @@ class SponsorsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should update sponsor" do
+  test "should redirect to index after updating sponsor" do
     put :update, :id => sponsors(:one).id, :sponsor => { }
 #   assert_redirected_to sponsor_path(assigns(:sponsor))
 	assert_redirected_to( :action => :index )
