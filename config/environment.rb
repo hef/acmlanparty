@@ -10,6 +10,15 @@ RAILS_GEM_VERSION = '2.2.2' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
+# Load RDiscount for markdown parsing
+begin
+  require "rdiscount"
+  BlueCloth = RDiscount    # If you want to sub rdisc for bluecloth
+rescue LoadError
+  # If we couldn't load rdiscount then attempt to fall back to bluecloth
+  require 'bluecloth'
+end  
+
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers

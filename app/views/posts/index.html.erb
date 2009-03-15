@@ -1,6 +1,11 @@
 <% for post in @posts %>
     <h1><%=h post.title %></h1>
-    <div id="maintext"><p><%=h post.body %></p></div>
+	<div id="maintext">
+		<p>
+			<%= post.formatted_body %>
+		</p>
+	</div>
+
     <%= link_to 'Show', post %>
     <%= link_to 'Edit', edit_post_path(post) %>
     <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>

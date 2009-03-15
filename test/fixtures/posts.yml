@@ -2,28 +2,40 @@
 
 rules:
   title: Rules
-  body: "The Next LAN Party is April 25th at 1:00pm lasting until April 26th at 11:00 pm
+  body: | 
+    The next LAN party is April 25th at 1:00pm lasting until April 
+    26th at 11:00 pm
 
-  Seating:
-  Seats can be preregistered.
-  If you are in a seat that is registered to someone else you will be asked to relocate.
+    Seating
+    --------
+    Seats can be pre-registered. If you are in a seat that is registered 
+    to someone else you will be asked to relocate.
 
-  Fees:
-  $5 for ACM members *
-  $10 for non-ACM members *
-  *An additional $5 for those who don't pre-register
+    Fees
+    --------
+       * $5 for ACM members 
+       * $10 for non-ACM members 
+       * An additional $5 for those who did not pre-register
 
-  MAC Address Registration.
-  In order to participate you must agree to the following conditions:
-  1. Scan for all Viruses and spyware on your machine
-  2. Do not use Bittorrent to download any files, legal or otherwise
-  (This includes updaters that use bit torrent, like World of Warcraft)
-  3. Do not download any illegal material from the internet
-  4. UIC Students agree to take full responsibility for any guests that they bring
 
-  Once you have agreed to the above conditions on the appropriate form, an ACM admin will add your MAC address to the list of approved MAC addresses and you will then be able to participate.
+    MAC Address Registration
+    -----------
+    In order to participate you must agree to the following condition: 
 
-  1. Make sure you register for prizes. Read the guide on the page to decide which method of registration you want to use."
+    1. Scan for all Viruses and spyware on your machine 
+    2. Do not use Bittorrent to download any files, legal or otherwise 
+       (This includes updaters that use bit torrent, like World of Warcraft)
+    3. Do not download any illegal material from the internet 
+    4. UIC Students agree to take full responsibility for any guests that 
+       they bring
+
+    Once you have agreed to the above conditions on the appropriate form, 
+    an ACM admin will add your MAC address to the list of approved MAC 
+    addresses and you will then be able to participate.
+
+
+    Make sure you register for prizes. Read the guide on the page to 
+    decide which method of registration you want to use.
 
 two:
   title: MyString
