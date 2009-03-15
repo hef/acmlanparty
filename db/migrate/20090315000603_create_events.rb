@@ -1,10 +1,10 @@
 class CreateEvents < ActiveRecord::Migration
   def self.up
     create_table :events do |t|
-      t.int :instance
+      t.integer :instance
       t.datetime :start
       t.datetime :end
-      t.int :type
+      t.integer :type
       t.string :title
 
       t.timestamps
