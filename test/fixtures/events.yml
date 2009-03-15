@@ -4,33 +4,28 @@ one:
   instance: 1
   start: 2009-03-20 17:00:00
   end: 2009-03-20 19:00:00
-  type: 1
   title: Team Fortress 2 Tournament
 
 two:
   instance: 1
   start: 2009-03-20 19:00:00
   end: 2009-03-20 21:00:00
-  type: 1
   title: Left 4 Dead Tournament
 
 three:
   instance: 1
   start: 2009-03-20 21:00:00
   end: 2009-03-20 23:00:00
-  type: 1
   title: Company of Heroes Tournament
 
 four:
   instance: 1
   start: 2009-03-20 23:00:00
   end: 2009-03-21 00:00:00
-  type: 2
   title: Late Night Pizza
 
 four:
   instance: 1
   start: 2009-03-21 00:00:00
   end: 2009-03-21 02:00:00
-  type: 1
   title: Transport Tycoon Tournament
