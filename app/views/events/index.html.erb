@@ -1,19 +1,21 @@
 
+<%# --- Display a message if there are no upcoming lan parties --- %>
 <% if @instance == nil %>
 <p>There are no upcoming lan parties, sorry!</p>
 
+<%# --- Otherwise, display a quick explanation --- %>
 <% else %>
 		
-<h1>Listing events for <%= @instance.title %> </h1>
-
+<h1>Event Schedule for <%= @instance.title %> </h1>
 <p>The following is a listing of upcoming events for the lan party.</p>
 <p>&nbsp;</p>
-
 <% end %>
 
-<!-- List all of the events -->
-<% for dayevents in @events_list %>
 
+<%# --- Iterate through the day "buckets", and display the events for 
+        each day --- %>
+
+<% for dayevents in @events_list %>
 <h2>Events for <%= dayevents[0].start.strftime('%A %m/%d/%y') %></h2>
 
 <table id="eventstable">
@@ -23,7 +25,7 @@
 	<th>Options</th>
   </tr>
 
-  <!-- List all of the events for the day -->
+  <%# --- Iterate through the list of events for the day, and print --- %> 
   <% for event in dayevents %>
   <% 
 	 # See if the time matches, if so highlight the row
@@ -50,11 +52,21 @@
 		<%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %>
 	</td>
   </tr>
+
+  <%# End rendering of the day %>
   <% end %>
+
 </table>
 
 <br/><br/>
 
+<%# End iteration of the day lists %>
 <% end %>
 
-<%= link_to 'New event', new_event_path %>
+
+<%# --- Show a link to creating new events, unless we don't have any
+		lan parties --- %>
+
+<% if @instance != nil %>
+   <%= link_to 'New event', new_event_path %>
+<% end %>
