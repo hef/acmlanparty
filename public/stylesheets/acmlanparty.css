@@ -99,7 +99,7 @@ body {
   padding-bottom: 2px;
   font: normal 14pt Arial, sans-serif;
   font-weight: bold;
-  color: #99FF00;
+  color: #B2DD5D;
 }
 .subtitle,h2 {
   font: normal 12pt Arial, sans-serif;
@@ -128,7 +128,7 @@ input.btn{
 
 h2
 {
-	color: #99FF66;
+	color: #94B84D;
 }
 
 
@@ -148,4 +148,12 @@ h2
 	border-width: 1px;
 	border-color: #BCBCBC;
 
+}
+
+.highlight
+{
+	border-color: #76913D;
+	border-width: 1px;
+	border-style: dashed;
+	background: #505050;
 }

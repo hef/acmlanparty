@@ -2,7 +2,7 @@
 
 one:
   lan_party: marchlanparty
-  start: <%= Time.now %>
+  start: <%= Time.current %>
   end: <%= 5.minutes.from_now %>
   title: Team Fortress 2 Tournament
 

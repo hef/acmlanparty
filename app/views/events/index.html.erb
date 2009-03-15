@@ -17,17 +17,26 @@
 
   <!-- List all of the events for the day -->
   <% for event in dayevents %>
+  <% 
+	 # See if the time matches, if so highlight the row
+     timeIdTag = ""
+
+	 if event.end >= Time.current and event.start <= Time.current
+       timeIdTag = "class=\"highlight\""
+     end
+  %>	 
+
   <tr>
-	<td width="20%">
+	<td width="20%" <%= timeIdTag %>>
 		<%=h event.start.strftime('%I:%M') %> - 
 		<%=h event.end.strftime('%I:%M')   %>
     </td>
 
-	<td width="60%">
+	<td width="60%" <%= timeIdTag %>>
 		<%=h event.title %>
     </td>
 
-	<td width="20%">
+	<td width="20%" <%= timeIdTag %>>
 		<%= link_to 'Show', event %>
     	<%= link_to 'Edit', edit_event_path(event) %>
 		<%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %>
