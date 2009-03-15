@@ -1,8 +1,8 @@
-class InstancesController < ApplicationController
+class LanPartiesController < ApplicationController
   # GET /lan_parties
   # GET /lan_parties.xml
   def index
-    @lan_parties = Instance.find(:all)
+    @lan_parties = LanParty.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class InstancesController < ApplicationController
   # GET /lan_parties/1
   # GET /lan_parties/1.xml
   def show
-    @lan_party = Instance.find(params[:id])
+    @lan_party = LanParty.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class InstancesController < ApplicationController
   # GET /lan_parties/new
   # GET /lan_parties/new.xml
   def new
-    @lan_party = Instance.new
+    @lan_party = LanParty.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,17 +34,17 @@ class InstancesController < ApplicationController
 
   # GET /lan_parties/1/edit
   def edit
-    @lan_party = Instance.find(params[:id])
+    @lan_party = LanParty.find(params[:id])
   end
 
   # POST /lan_parties
   # POST /lan_parties.xml
   def create
-    @lan_party = Instance.new(params[:lan_party])
+    @lan_party = LanParty.new(params[:lan_party])
 
     respond_to do |format|
       if @lan_party.save
-        flash[:notice] = 'Instance was successfully created.'
+        flash[:notice] = 'LanParty was successfully created.'
         format.html { redirect_to(@lan_party) }
         format.xml  { render :xml => @lan_party, :status => :created, :location => @lan_party }
       else
@@ -57,11 +57,11 @@ class InstancesController < ApplicationController
   # PUT /lan_parties/1
   # PUT /lan_parties/1.xml
   def update
-    @lan_party = Instance.find(params[:id])
+    @lan_party = LanParty.find(params[:id])
 
     respond_to do |format|
       if @lan_party.update_attributes(params[:lan_party])
-        flash[:notice] = 'Instance was successfully updated.'
+        flash[:notice] = 'LanParty was successfully updated.'
         format.html { redirect_to(@lan_party) }
         format.xml  { head :ok }
       else
@@ -74,7 +74,7 @@ class InstancesController < ApplicationController
   # DELETE /lan_parties/1
   # DELETE /lan_parties/1.xml
   def destroy
-    @lan_party = Instance.find(params[:id])
+    @lan_party = LanParty.find(params[:id])
     @lan_party.destroy
 
     respond_to do |format|
