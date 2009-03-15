@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   #
   def index
         @lan_parties =  LanParty.find(:all, :conditions => ['end > ?', Time.now] )
+        @events = Event.all
 
 	#
 	# Print the page
@@ -31,8 +32,8 @@ class EventsController < ApplicationController
   #
   def new
     @event           = Event.new
-	@instances       = LanParty.all.map { |i| [ i.title, i.id ] }
-    @currentInstance = LanParty.FindNextScheduled	
+    @lan_parties     = LanParty.all.map { |i| [ i.title, i.id ] }
+    @next_lan_party  = LanParty.find(:first, :conditions => ['end > ?', Time.now] )
 
     respond_to do |format|
       format.html # new.html.erb
