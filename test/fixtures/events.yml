@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  instance: 
+  start: 2009-03-14 19:06:03
+  end: 2009-03-14 19:06:03
+  type: 
+  title: MyString
+
+two:
+  instance: 
+  start: 2009-03-14 19:06:03
+  end: 2009-03-14 19:06:03
+  type: 
+  title: MyString
