@@ -1,5 +1,7 @@
 class SponsorsController < ApplicationController
   # Display a list of the sponsors for this lan party event
+
+  before_filter :staff_required, :except => [ :index  ]
   def index
     @sponsors = Sponsor.find(:all)
 

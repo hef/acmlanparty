@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090315031652) do
+ActiveRecord::Schema.define(:version => 20090315070847) do
 
   create_table "events", :force => true do |t|
     t.integer  "lan_party_id"
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20090315031652) do
     t.datetime "activated_at"
     t.string   "state",                                    :default => "passive"
     t.datetime "deleted_at"
+    t.boolean  "staff"
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
