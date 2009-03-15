@@ -1,7 +1,15 @@
+
+<% if @instance == nil %>
+<p>There are no upcoming lan parties, sorry!</p>
+
+<% else %>
+		
 <h1>Listing events for <%= @instance.title %> </h1>
 
 <p>The following is a listing of upcoming events for the lan party.</p>
 <p>&nbsp;</p>
+
+<% end %>
 
 <!-- List all of the events -->
 <% for dayevents in @events_list %>

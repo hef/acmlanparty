@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   #
   def index
 	@instance    = LanParty.FindNextScheduled
-    @events      = Event.FindAllByLanPartyId( @instance.id )
+	@events      = Event.FindAllByLanParty( @instance )
 	@events_list = []   
 	lastDay      = nil
 
