@@ -5,14 +5,20 @@
 
   <p>
     <%= f.label :title %><br />
-    <%= f.text_field :title %>
+	<%= f.text_field :title, :size => 80 %>
   </p>
   <p>
     <%= f.label :body %><br />
-    <%= f.text_area :body %>
+	<%= f.text_area :body, :cols => 80, :rows => 30 %>
   </p>
+
   <p>
-    <%= f.submit "Create" %>
+     All posts are formatted using <A href="http://daringfireball.net/projects/markdown/" target="_BLANK">blackdown</a> syntax. 
+	 Need <a href="http://daringfireball.net/projects/markdown/syntax" target="_BLANK">help with the syntax</a>?
+  </p>
+
+  <p>
+    <%= f.submit "Create news post" %>
   </p>
 <% end %>
 
