@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :events
 
-  map.resources :instances
+  map.resources :lan_parties
 
   map.resources :sponsors
 
