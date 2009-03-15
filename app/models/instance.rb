@@ -1,4 +1,5 @@
 class Instance < ActiveRecord::Base
+	has_many :events
 	
 	# Returns the next scheduled instance (either the instance
 	# that is scheduled to happen now, or the next one in the future)

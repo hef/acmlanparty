@@ -2,9 +2,28 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.xml
   def index
-	@instance = Instance.FindNextScheduled
-    @events = Event.find(:all)
+	@instance    = Instance.FindNextScheduled
+    @events      = Event.FindAllByInstanceId( @instance.id )
+	@events_list = []   
+	lastDay      = nil
 
+	#
+	# Break up the events into groups by day
+	#
+	@events.each do |event|
+		if( lastDay != event.start.mday )
+			# Create a new section
+			@events_list.push( Array.new )
+			lastDay = event.start.mday
+		end
+
+		# Add the event
+		@events_list.last.push( event )
+	end
+
+	#
+	# Print the page
+	#
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @events }

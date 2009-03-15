@@ -1,27 +1,25 @@
 <h1>Listing events for <%= @instance.title %> </h1>
 
-<table>
-  <tr>
-    <th>Instance</th>
-    <th>Start</th>
-    <th>End</th>
-    <th>Type</th>
-    <th>Title</th>
-  </tr>
+<!-- List all of the events -->
+<% for dayevents in @events_list %>
 
-<% for event in @events %>
+<h2>Events for <%= dayevents[0].start.strftime('%A %m/%j/%y') %></h2>
+
+<table>
+  <!-- List all of the events for the day -->
+  <% for event in dayevents %>
   <tr>
-    <td><%=h event.instance_id %></td>
-    <td><%=h event.start %></td>
-    <td><%=h event.end %></td>
-    <td><%=h event.type %></td>
+    <td><%=h event.start.strftime('%I:%M') %> - 
+        <%=h event.end.strftime('%I:%M')   %></td>
     <td><%=h event.title %></td>
     <td><%= link_to 'Show', event %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
     <td><%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
-<% end %>
+  <% end %>
 </table>
+
+<% end %>
 
 <br />
 
