@@ -1,5 +1,12 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
+feblanparty:
+  start: 2009-02-10 13:00:00
+  end: 2009-02-10 22:00:00
+  title: February Lan Party
+  description: Blah blah blah
+  location: UIC ACM
+
 marchlanparty:
   start: 2009-03-20 14:00:00
   end: 2009-03-21 12:00:00

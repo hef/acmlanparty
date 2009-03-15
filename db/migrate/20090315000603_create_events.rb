@@ -4,7 +4,6 @@ class CreateEvents < ActiveRecord::Migration
       t.integer :instance
       t.datetime :start
       t.datetime :end
-      t.integer :type
       t.string :title
 
       t.timestamps
