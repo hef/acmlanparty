@@ -8,7 +8,7 @@ class LanParty < ActiveRecord::Base
 	def self.FindNextScheduled
 		# Find it
 		self.find( :first, 
-		           :conditions => "start >= date('now')",
+				   :conditions => "end >= date('now')",
 		           :order => "start asc"
 		)
 	end
