@@ -4,24 +4,7 @@ class EventsController < ApplicationController
   # Show a listing of events for the current lan party
   #
   def index
-	@instance    = LanParty.FindNextScheduled
-	@events      = Event.FindAllByLanParty( @instance )
-	@events_list = []   
-	lastDay      = nil
-
-	#
-	# Break up the events into groups by day
-	#
-	@events.each do |event|
-		if( lastDay != event.start.mday )
-			# Create a new section
-			@events_list.push( Array.new )
-			lastDay = event.start.mday
-		end
-
-		# Add the event
-		@events_list.last.push( event )
-	end
+        @lan_parties =  LanParty.find(:all, :conditions => ['end > ?', Time.now] )
 
 	#
 	# Print the page

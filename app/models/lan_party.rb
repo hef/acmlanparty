@@ -7,9 +7,9 @@ class LanParty < ActiveRecord::Base
 	# Will return nil if there is no scheduled event coming up
 	def self.FindNextScheduled
 		# Find it
-		self.find( :first, 
-				   :conditions => "end >= date('now')",
-		           :order => "start asc"
+		self.find( :all, 
+                           :conditions => "end >= date('now')",
+                           :order => "start asc"
 		)
 	end
 end
