@@ -11,3 +11,4 @@ hef:
   login: hef
   email: hef@pbrfrat.com
   state: active
+  staff: true
