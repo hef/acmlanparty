@@ -1,26 +1,43 @@
 <h1>Listing events for <%= @instance.title %> </h1>
 
+<p>The following is a listing of upcoming events for the lan party.</p>
+<p>&nbsp;</p>
+
 <!-- List all of the events -->
 <% for dayevents in @events_list %>
 
 <h2>Events for <%= dayevents[0].start.strftime('%A %m/%d/%y') %></h2>
 
-<table>
+<table id="eventstable">
+  <tr>
+    <th>Time slot</th>
+    <th>Description</th>
+	<th>Options</th>
+  </tr>
+
   <!-- List all of the events for the day -->
   <% for event in dayevents %>
   <tr>
-    <td><%=h event.start.strftime('%I:%M') %> - 
-        <%=h event.end.strftime('%I:%M')   %></td>
-    <td><%=h event.title %></td>
-    <td><%= link_to 'Show', event %></td>
-    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-    <td><%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %></td>
+	<td width="20%">
+		<%=h event.start.strftime('%I:%M') %> - 
+		<%=h event.end.strftime('%I:%M')   %>
+    </td>
+
+	<td width="60%">
+		<%=h event.title %>
+    </td>
+
+	<td width="20%">
+		<%= link_to 'Show', event %>
+    	<%= link_to 'Edit', edit_event_path(event) %>
+		<%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %>
+	</td>
   </tr>
   <% end %>
 </table>
 
-<% end %>
+<br/><br/>
 
-<br />
+<% end %>
 
 <%= link_to 'New event', new_event_path %>
