@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.xml
   def index
+	@instance = Instance.FindNextScheduled
     @events = Event.find(:all)
 
     respond_to do |format|

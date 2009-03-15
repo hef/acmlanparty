@@ -1,4 +1,4 @@
-<h1>Listing events</h1>
+<h1>Listing events for <%= @instance.title %> </h1>
 
 <table>
   <tr>
@@ -11,7 +11,7 @@
 
 <% for event in @events %>
   <tr>
-    <td><%=h event.instance %></td>
+    <td><%=h event.instance_id %></td>
     <td><%=h event.start %></td>
     <td><%=h event.end %></td>
     <td><%=h event.type %></td>
