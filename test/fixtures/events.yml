@@ -1,31 +1,31 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  lan_party_id: marchlanparty
+  lan_party: marchlanparty
   start: 2009-03-20 17:00:00
   end: 2009-03-20 19:00:00
   title: Team Fortress 2 Tournament
 
 two:
-  lan_party_id: marchlanparty
+  lan_party: marchlanparty
   start: 2009-03-20 19:00:00
   end: 2009-03-20 21:00:00
   title: Left 4 Dead Tournament
 
 three:
-  lan_party_id: marchlanparty
+  lan_party: marchlanparty
   start: 2009-03-20 21:00:00
   end: 2009-03-20 23:00:00
   title: Company of Heroes Tournament
 
 four:
-  lan_party_id: marchlanparty
+  lan_party: marchlanparty
   start: 2009-03-20 23:00:00
   end: 2009-03-21 00:00:00
   title: Late Night Pizza
 
 four:
-  lan_party_id: marchlanparty
+  lan_party: marchlanparty
   start: 2009-03-21 00:00:00
   end: 2009-03-21 02:00:00
   title: Transport Tycoon Tournament

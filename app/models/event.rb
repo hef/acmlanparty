@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-	belongs_to :lanparty
+	belongs_to :lan_party
 
 	# Returns a list of events (sorted by start_date) that 
 	# correspond to the passed instance_id
