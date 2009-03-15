@@ -2,30 +2,30 @@
 
 one:
   lan_party: marchlanparty
-  start: 2009-03-20 17:00:00
-  end: 2009-03-20 19:00:00
+  start: <%= Time.now %>
+  end: <%= 5.minutes.from_now %>
   title: Team Fortress 2 Tournament
 
 two:
   lan_party: marchlanparty
-  start: 2009-03-20 19:00:00
-  end: 2009-03-20 21:00:00
+  start: <%= 5.minutes.from_now %>
+  end: <%= 10.minutes.from_now %>
   title: Left 4 Dead Tournament
 
 three:
   lan_party: marchlanparty
-  start: 2009-03-20 21:00:00
-  end: 2009-03-20 23:00:00
+  start: <%= 10.minutes.from_now %>
+  end: <%= 1.hour.from_now %>
   title: Company of Heroes Tournament
 
 four:
   lan_party: marchlanparty
-  start: 2009-03-20 23:00:00
-  end: 2009-03-21 00:00:00
+  start: <%= 1.hour.from_now %>
+  end:  <%= 5.hour.from_now %>
   title: Late Night Pizza
 
 four:
   lan_party: marchlanparty
-  start: 2009-03-21 00:00:00
-  end: 2009-03-21 02:00:00
+  start: <%= 1.day.from_now %>
+  end: <%= 2.days.from_now %>
   title: Transport Tycoon Tournament
