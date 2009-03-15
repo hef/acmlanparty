@@ -1,6 +1,6 @@
-<h1>Editing instance</h1>
+<h1>New lan_party</h1>
 
-<% form_for(@instance) do |f| %>
+<% form_for(@lan_party) do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -24,9 +24,8 @@
     <%= f.text_area :location %>
   </p>
   <p>
-    <%= f.submit "Update" %>
+    <%= f.submit "Create" %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @instance %> |
-<%= link_to 'Back', instances_path %>
+<%= link_to 'Back', lan_parties_path %>

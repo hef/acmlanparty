@@ -2,8 +2,8 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.xml
   def index
-	@instance    = Instance.FindNextScheduled
-    @events      = Event.FindAllByInstanceId( @instance.id )
+	@instance    = LanParty.FindNextScheduled
+    @events      = Event.FindAllByLanPartyId( @instance.id )
 	@events_list = []   
 	lastDay      = nil
 

@@ -1,0 +1,28 @@
+<h1>Listing lan_parties</h1>
+
+<table>
+  <tr>
+    <th>Start</th>
+    <th>End</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Location</th>
+  </tr>
+
+<% for lan_party in @lan_parties %>
+  <tr>
+    <td><%=h lan_party.start %></td>
+    <td><%=h lan_party.end %></td>
+    <td><%=h lan_party.title %></td>
+    <td><%=h lan_party.description %></td>
+    <td><%=h lan_party.location %></td>
+    <td><%= link_to 'Show', lan_party %></td>
+    <td><%= link_to 'Edit', edit_lan_party_path(lan_party) %></td>
+    <td><%= link_to 'Destroy', lan_party, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New lan_party', new_lan_party_path %>

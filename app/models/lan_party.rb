@@ -1,4 +1,4 @@
-class Instance < ActiveRecord::Base
+class LanParty < ActiveRecord::Base
 	has_many :events
 	
 	# Returns the next scheduled instance (either the instance

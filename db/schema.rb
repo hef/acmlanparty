@@ -9,10 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090315021709) do
+ActiveRecord::Schema.define(:version => 20090315031652) do
 
   create_table "events", :force => true do |t|
-    t.integer  "instance_id"
+    t.integer  "lan_party_id"
     t.datetime "start"
     t.datetime "end"
     t.string   "title"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20090315021709) do
     t.datetime "updated_at"
   end
 
-  create_table "instances", :force => true do |t|
+  create_table "lan_parties", :force => true do |t|
     t.datetime "start"
     t.datetime "end"
     t.string   "title"

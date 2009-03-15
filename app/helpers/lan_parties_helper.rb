@@ -1,0 +1,2 @@
+module LanPartiesHelper
+end

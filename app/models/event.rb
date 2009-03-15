@@ -1,11 +1,11 @@
 class Event < ActiveRecord::Base
-	belongs_to :instance
+	belongs_to :lanparty
 
 	# Returns a list of events (sorted by start_date) that 
 	# correspond to the passed instance_id
-	def self.FindAllByInstanceId( id )
+	def self.FindAllByLanPartyId( id )
 		self.find( :all,
-		           :conditions => ["instance_id = ?", id],
+		           :conditions => ["lan_party_id = ?", id],
 		           :order => "start asc" )
 	end
 end
