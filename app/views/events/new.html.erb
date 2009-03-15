@@ -5,7 +5,8 @@
 
   <p>
     <%= f.label :lan_party_id %><br />
-    <%= f.text_field :lan_party_id %>
+	<!--    <%= f.text_field :lan_party_id %> -->
+	<%= f.select :lan_party_id, @instances, { :selected => @currentInstance.id } %>
   </p>
   <p>
     <%= f.label :start %><br />

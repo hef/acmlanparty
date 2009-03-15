@@ -1,9 +1,11 @@
 class EventsController < ApplicationController
-  # GET /events
-  # GET /events.xml
+  
+  #
+  # Show a listing of events for the current lan party
+  #
   def index
 	@instance    = LanParty.FindNextScheduled
-    @events      = Event.FindAllByLanPartyId( @instance.id )
+	@events      = Event.FindAllByLanParty( @instance )
 	@events_list = []   
 	lastDay      = nil
 
@@ -41,10 +43,13 @@ class EventsController < ApplicationController
     end
   end
 
-  # GET /events/new
-  # GET /events/new.xml
+  #
+  # Show the form to create a new lan party event
+  #
   def new
-    @event = Event.new
+    @event           = Event.new
+	@instances       = LanParty.all.map { |i| [ i.title, i.id ] }
+    @currentInstance = LanParty.FindNextScheduled	
 
     respond_to do |format|
       format.html # new.html.erb
@@ -52,13 +57,17 @@ class EventsController < ApplicationController
     end
   end
 
-  # GET /events/1/edit
+  # 
+  # Edit the selected event
+  #
   def edit
-    @event = Event.find(params[:id])
+    @event           = Event.find(params[:id])
+	@instances       = LanParty.all.map { |i| [ i.title, i.id ] }
   end
 
-  # POST /events
-  # POST /events.xml
+  # 
+  # Create the lan party event
+  #
   def create
     @event = Event.new(params[:event])
 
