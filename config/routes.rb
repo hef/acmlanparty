@@ -8,6 +8,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :news_items
 
+  map.resources :posts
+
   map.resources :pages
 
   map.resources :games
