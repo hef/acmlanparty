@@ -37,6 +37,7 @@ rules:
     Make sure you register for prizes. Read the guide on the page to 
     decide which method of registration you want to use.
 
-two:
-  title: MyString
-  body: MyText
+mumble:
+  title: The mumble server is back online
+  body: | 
+    The mumble server is back online you can connect to it [here](mumble://172.29.0.15)
