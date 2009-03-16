@@ -1,15 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.resources :events
 
   map.resources :lan_parties
 
   map.resources :sponsors
 
-  map.resources :sponsors
+  map.resources :news_items
 
-  map.resources :posts
-
-  map.resources :posts
+  map.resources :pages
 
   map.resources :games
 
@@ -24,7 +23,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session
 
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate', :activation_code => nil
-  map.root :controller => 'posts'
+  map.root :controller => 'news_items'
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -66,4 +65,6 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing the them or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+  
+  map.connect ':title', :controller => 'pages', :action => 'show'
 end

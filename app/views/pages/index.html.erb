@@ -1,0 +1,16 @@
+<% for page in @pages %>
+    <h1><%=h page.title %></h1>
+	<div id="maintext">
+		<p>
+			<%= page.formatted_body %>
+		</p>
+	</div>
+
+    <%= link_to 'Show', page %>
+    <%= link_to 'Edit', edit_page_path(page) %>
+    <%= link_to 'Destroy', page, :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+
+<br />
+
+<%= link_to 'New page', new_page_path %>

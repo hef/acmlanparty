@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  require 'page'
+  require 'news_item'
   # GET /posts
   # GET /posts.xml
   def index

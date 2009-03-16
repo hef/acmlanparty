@@ -1,6 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 rules:
+  type: Page
   title: Rules
   body: | 
     The next LAN party is April 25th at 1:00pm lasting until April 
@@ -38,6 +39,7 @@ rules:
     decide which method of registration you want to use.
 
 mumble:
+  type: NewsItem
   title: The mumble server is back online
   body: | 
     The mumble server is back online you can connect to it [here](mumble://172.29.0.15)

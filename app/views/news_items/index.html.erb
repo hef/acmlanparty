@@ -1,0 +1,16 @@
+<% for news_item in @news_items %>
+    <h1><%=h news_item.title %></h1>
+	<div id="maintext">
+		<p>
+			<%= news_item.formatted_body %>
+		</p>
+	</div>
+
+    <%= link_to 'Show', news_item %>
+    <%= link_to 'Edit', edit_news_item_path(news_item) %>
+    <%= link_to 'Destroy', news_item, :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+
+<br />
+
+<%= link_to 'New news_item', new_news_item_path %>

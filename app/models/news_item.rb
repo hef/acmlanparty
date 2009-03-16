@@ -1,0 +1,2 @@
+class NewsItem < Post
+end
