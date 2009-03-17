@@ -1,11 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :attendees
-
   map.resources :events
 
   map.resources :lan_parties
 
   map.resources :sponsors
+
+  map.resources :sponsors
+
+  map.resources :posts
 
   map.resources :posts
 

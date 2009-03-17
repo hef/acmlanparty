@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090315070847) do
+ActiveRecord::Schema.define(:version => 20090316235501) do
+
+  create_table "attendees", :force => true do |t|
+    t.integer  "lan_party_id"
+    t.integer  "user_id"
+    t.string   "handle"
+    t.datetime "registered_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "events", :force => true do |t|
     t.integer  "lan_party_id"
