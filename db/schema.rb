@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20090316235501) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type",       :default => "'--- :news_item\n'"
   end
 
   create_table "sponsors", :force => true do |t|
