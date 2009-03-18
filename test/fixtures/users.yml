@@ -12,3 +12,31 @@ hef:
   email: hef@pbrfrat.com
   state: active
   staff: true
+staff: 
+  salt: f76bcf089b36eeb0345f555a5e8dd895d053a11c
+  created_at: 2009-03-15 06:13:44
+  activated_at: 2009-03-15 06:14:43
+  crypted_password: f1216d0d74d4947b19b75ff7f2b21f4ecddb3f71
+  remember_token_expires_at: 
+  updated_at: 2009-03-15 06:14:43
+  deleted_at: 
+  activation_code: 
+  remember_token: 
+  login: staff
+  email: staff@acmlanparty.com
+  state: active
+  staff: true
+user: 
+  salt: f76bcf089b36eeb0345f555a5e8dd895d053a11c
+  created_at: 2009-03-15 06:13:44
+  activated_at: 2009-03-15 06:14:43
+  crypted_password: f1216d0d74d4947b19b75ff7f2b21f4ecddb3f71
+  remember_token_expires_at: 
+  updated_at: 2009-03-15 06:14:43
+  deleted_at: 
+  activation_code: 
+  remember_token: 
+  login: user
+  email: user@acmlanparty.com
+  state: active
+  staff: true

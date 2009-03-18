@@ -18,7 +18,7 @@
         <LI><A HREF='/'>Home</A></LI>
 	<LI><%= link_to "Events", events_path %></LI>
         <LI><A HREF='/signup'>Register</A></LI>
-        <LI><A HREF='/Attendees'>Attendees</A></LI>
+        <LI><A HREF='/users'>Attendees</A></LI>
         <LI><A HREF='/directions'>Directions</A></LI>
         <LI><A HREF='/sponsors'>Sponsors</A></LI>
         <LI><A HREF='/faq'>FAQ</A></LI>

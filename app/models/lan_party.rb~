@@ -1,7 +1,5 @@
 class LanParty < ActiveRecord::Base
 	has_many :events
-	has_many :attendees
-	has_many :users, :through => :attendess
 	
 	# Returns the next scheduled instance (either the instance
 	# that is scheduled to happen now, or the next one in the future)

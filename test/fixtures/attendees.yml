@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+marchhef:
+  lan_party: marchlanparty
+  user: hef
+  handle: "[ACM]hef"
+  registered_at: 2009-03-16 18:55:01
+
+marchuser:
+  lan_party: marchlanparty
+  user: user
+  handle: "[MWS]scott"
+  registered_at: 2009-03-16 18:55:02
