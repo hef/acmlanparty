@@ -15,12 +15,12 @@
   <div id="content">
     <div align="right" id="navigation">
       <ul>
-        <LI><A HREF='/'>Home</A></LI>
+        <LI><%= link_to "Home", root_url%></LI>
 	<LI><%= link_to "Events", events_path %></LI>
         <LI><A HREF='/signup'>Register</A></LI>
-        <LI><A HREF='/Attendees'>Attendees</A></LI>
+	<LI><%= link_to "Attendees", attendees_path%></LI>
         <LI><A HREF='/directions'>Directions</A></LI>
-        <LI><A HREF='/sponsors'>Sponsors</A></LI>
+	<LI><%= link_to "Sponsors", sponsors_path%></LI>
         <LI><A HREF='/faq'>FAQ</A></LI>
         <LI><A HREF='/pictures'>Pictures</A></LI>
       </ul>
