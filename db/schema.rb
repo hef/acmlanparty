@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090316235501) do
+ActiveRecord::Schema.define(:version => 20090327165948) do
 
   create_table "attendees", :force => true do |t|
     t.integer  "lan_party_id"
@@ -50,7 +50,8 @@ ActiveRecord::Schema.define(:version => 20090316235501) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "type",       :default => "'--- :news_item\n'"
+    t.string   "type",       :default => "'"
+    t.string   "permalink"
   end
 
   create_table "sponsors", :force => true do |t|
