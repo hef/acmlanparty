@@ -19,10 +19,10 @@
 	<LI><%= link_to "Events", events_path %></LI>
         <LI><A HREF='/signup'>Register</A></LI>
 	<LI><%= link_to "Attendees", attendees_path%></LI>
-        <LI><A HREF='/directions'>Directions</A></LI>
+        <LI><%= link_to "Directions", Page.find_by_permalink("directions")%></LI>
 	<LI><%= link_to "Sponsors", sponsors_path%></LI>
-        <LI><A HREF='/faq'>FAQ</A></LI>
-        <LI><A HREF='/pictures'>Pictures</A></LI>
+        <LI><%= link_to "FAQ", Page.find_by_permalink("faq")%></LI>
+        <LI><%= link_to "Pictures", Page.find_by_permalink("pictures")%></LI>
       </ul>
     </div>
     <HR>
