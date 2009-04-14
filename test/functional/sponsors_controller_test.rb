@@ -19,14 +19,14 @@ class SponsorsControllerTest < ActionController::TestCase
       post :create, :sponsor => { }
     end
 
-#   assert_redirected_to sponsor_path(assigns(:sponsor))
-	assert_redirected_to( :action => :index )
+   #assert_redirected_to sponsor_path(assigns(:sponsor))
+   assert_redirected_to( :action => :index )
   end
 
   test "should show the website of the sponsor" do
     get :show, :id => sponsors(:google).id
-#   assert_response :success
-	assert_redirected_to( sponsors(:google).url )
+   assert_response :success
+#	assert_redirected_to( sponsors(:google).url )
   end
 
   test "should get edit" do
