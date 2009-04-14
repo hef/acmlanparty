@@ -17,7 +17,11 @@ class SponsorsController < ApplicationController
   def show
     @sponsor = Sponsor.find(params[:id])
 
-	redirect_to @sponsor.url
+    respond_to do |format|
+	    format.html # show show.html.erb
+	    format.xml { render :xml=> @sponsor }
+    end
+
   end
 
   # Create a new sponsor and display a form to set its properties
