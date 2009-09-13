@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(:version => 20090327165948) do
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "type",       :default => "'"
+    t.string   "type",       :default => "'--- :news_item\n'"
     t.string   "permalink"
   end
 
