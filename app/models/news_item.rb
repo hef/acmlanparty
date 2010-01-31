@@ -1,2 +1,0 @@
-class NewsItem < Post
-end
