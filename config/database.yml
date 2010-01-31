@@ -20,9 +20,3 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
-
-hefacmuserdir:
-  adapter: sqlite3
-  database: db/hefacmuserdir.sqlite3
-  pool: 5
-  timeout: 5000
