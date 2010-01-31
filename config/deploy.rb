@@ -1,6 +1,8 @@
 set :application, "acmlanparty"
 set :repository,  "git@github.com:hef/acmlanparty.git"
 default_run_options[:pty] = true
+ssh_options[:forward_agent] = true
+set :use_sudo, false
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
